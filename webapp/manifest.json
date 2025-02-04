@@ -1,0 +1,122 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "app.mainapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.16.2",
+      "toolsId": "8e0592ec-26d4-4850-a5da-499cd77f32f0"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "mainapplication-show": {
+          "semanticObject": "mainapplication",
+          "action": "show",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "componentUsages": {        
+      "myUsage": {          
+        "name": "my.component",          
+        "settings": {}        }    
+      },    
+        "resourceRoots": {        
+          "my.component": "https://93ba30e2trial.launchpad.cfapps.us10.hana.ondemand.com/2506e997-6061-4052-8fe4-520408db9a31.appdemoplugin.appdemoplugin"    
+        },
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.132.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "app.mainapp.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "app.mainapp.view",
+        "async": true,
+        "viewPath": "app.mainapp.view"
+      },
+      "routes": [
+        {
+          "name": "RouteView1",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView1"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView1": {
+          "id": "View1",
+          "name": "View1"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "app.mainapp.view.App",
+      "type": "XML",
+      "id": "App"
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "appmainapp"
+  }
+}
