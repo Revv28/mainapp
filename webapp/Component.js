@@ -13,6 +13,7 @@ sap.ui.define([
         },
 
         init() {
+            // jQuery.sap.includeStyleSheet(sap.ui.require.toUrl("app/demoplugin/css/style.css"));
             jQuery.sap.registerModulePath("my.component", "https://93ba30e2trial.launchpad.cfapps.us10.hana.ondemand.com/2506e997-6061-4052-8fe4-520408db9a31.appdemoplugin.appdemoplugin");
             // call the base component's init function
             UIComponent.prototype.init.apply(this, arguments);
