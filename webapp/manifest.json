@@ -46,15 +46,7 @@
     }
   },
   "sap.ui5": {
-    "componentUsages": {        
-      "myUsage": {          
-        "name": "my.component",          
-        "settings": {}        }    
-      },    
-        "resourceRoots": {        
-          "my.component": "https://93ba30e2trial.launchpad.cfapps.us10.hana.ondemand.com/2506e997-6061-4052-8fe4-520408db9a31.appdemoplugin.appdemoplugin"    
-        },
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.132.1",
       "libs": {

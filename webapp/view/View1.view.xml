@@ -4,8 +4,7 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <Button id="button" text="Hello from main app" press=""></Button>
-            <core:ComponentContainer width="100%" id="myComponentContainer"  usage="myUsage" height="100%"  manifest="true"/>
+            <Button id="button" text="Hello from main app" press=""/>
         </content>
     </Page>
 </mvc:View>
